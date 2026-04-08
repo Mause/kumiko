@@ -3,7 +3,7 @@
 import os
 import json
 from bottle import route, run, request, static_file, abort
-from kumikolib import Kumiko
+from kumiko import Kumiko
 from kumiko.html import HTML
 
 static_files = {
