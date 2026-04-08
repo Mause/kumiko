@@ -3,12 +3,14 @@ name = "kumiko"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Elliana May", email = "me@mause.me" }
-]
 requires-python = ">=3.10"
+authors = [{ name = "Elliana May", email = "me@mause.me" }]
 dependencies = ["opencv-python"]
 
 [build-system]
 requires = ["uv_build>=0.11.3,<0.12.0"]
 build-backend = "uv_build"
+
+[tool.ruff.format]
+indent-style = "tab"
+quote-style = "single"
