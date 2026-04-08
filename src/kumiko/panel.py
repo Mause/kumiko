@@ -176,7 +176,7 @@ class Panel:
 
 		# intersect
 		intersection_x = min(left.r, right.r) - right.x
-		min_w =  min(left.w(), right.w())
+		min_w = min(left.w(), right.w())
 		return min_w == 0 or intersection_x / min_w >= 1 / 3
 
 	def find_top_panel(self):

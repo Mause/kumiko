@@ -7,6 +7,9 @@ import cv2 as cv
 import numpy as np
 
 from .html import HTML
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class Debug:
@@ -62,7 +65,7 @@ class Debug:
 		Debug.time = time.time_ns()
 
 		elapsed = Debug.time - Debug.prev_time
-		print(f"{name} − {elapsed/pow(10,6):.0f}ms")
+		logger.info(f'{name} − {elapsed / pow(10, 6):.0f}ms')
 
 		return elapsed
 
@@ -131,10 +134,18 @@ class Debug:
 
 			# check both images' filename and size, should be the same
 			if os.path.basename(json1[p]['filename']) != os.path.basename(json2[p]['filename']):
-				print('error, filenames are not the same', json1[p]['filename'], json2[p]['filename'])
+				logger.error(
+					'error, filenames are not the same',
+					json1[p]['filename'],
+					json2[p]['filename'],
+				)
 				continue
 			if json1[p]['size'] != json2[p]['size']:
-				print('error, image sizes are not the same', json1[p]['size'], json2[p]['size'])
+				logger.error(
+					'error, image sizes are not the same',
+					json1[p]['size'],
+					json2[p]['size'],
+				)
 				continue
 
 			panels_v1 = list(map(lambda p: Panel(None, p), json1[p]['panels']))
