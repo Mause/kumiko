@@ -2,8 +2,8 @@ import math
 import cv2 as cv
 import numpy as np
 
-from lib.segment import Segment
-from lib.debug import Debug
+from .segment import Segment
+from .debug import Debug
 
 
 class Panel:
@@ -176,7 +176,7 @@ class Panel:
 
 		# intersect
 		intersection_x = min(left.r, right.r) - right.x
-		min_w =  min(left.w(), right.w())
+		min_w = min(left.w(), right.w())
 		return min_w == 0 or intersection_x / min_w >= 1 / 3
 
 	def find_top_panel(self):

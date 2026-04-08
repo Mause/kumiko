@@ -3,11 +3,10 @@ import subprocess
 import json
 import re
 import os
-from tests.base import BaseTest
+from .base import BaseTest
 
 
 class TestKumiko(BaseTest):
-
 	simple_image = './tests/images/000-common-page-templates/simple.png'
 	simple_image_panels = [
 		[36, 56, 268, 248],

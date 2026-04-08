@@ -7,8 +7,8 @@ import requests
 import subprocess
 from urllib.parse import urlparse
 
-from lib.page import Page, NotAnImageException
-from lib.debug import Debug
+from kumiko.page import Page, NotAnImageException
+from kumiko.debug import Debug
 
 
 class Kumiko:

@@ -8,9 +8,9 @@ import subprocess
 import hashlib
 import re
 
-from kumikolib import Kumiko
-from lib.html import HTML
-from lib.debug import Debug
+from kumiko import Kumiko
+from kumiko.html import HTML
+from kumiko.debug import Debug
 
 parser = argparse.ArgumentParser(description = 'Kumiko CLI')
 
