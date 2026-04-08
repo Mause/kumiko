@@ -7,8 +7,8 @@ import argparse
 import re
 import tempfile
 import time
-from lib.debug import Debug
-from lib.html import HTML
+from kumiko.debug import Debug
+from kumiko.html import HTML
 
 
 class Tester:

@@ -1,7 +1,7 @@
 import unittest
 import os
 import shutil
-from lib.panel import Panel
+from kumiko.panel import Panel
 
 
 class BaseTest(unittest.TestCase):

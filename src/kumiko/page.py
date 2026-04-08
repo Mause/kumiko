@@ -6,9 +6,9 @@ import time
 import cv2 as cv
 import numpy as np
 
-from lib.panel import Panel
-from lib.segment import Segment
-from lib.debug import Debug
+from .panel import Panel
+from .segment import Segment
+from .debug import Debug
 
 
 class NotAnImageException(Exception):
