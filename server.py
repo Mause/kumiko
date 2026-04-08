@@ -4,7 +4,7 @@ import os
 import json
 from bottle import route, run, request, static_file, abort
 from kumikolib import Kumiko
-from lib.html import HTML
+from kumiko.html import HTML
 
 static_files = {
 	'jquery-3.2.1.min.js': True,
